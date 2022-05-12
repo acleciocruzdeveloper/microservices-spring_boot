@@ -2,6 +2,7 @@ package com.book.task.entity;
 
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -11,15 +12,16 @@ import javax.validation.constraints.NotNull;
 public class Task {
 
     @Id
+    @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @Column
-    @NotNull
+    @NotNull(message = "{NotNull.Task.name}")
     private String name;
 
     @Column
-    @NotNull
+    @NotNull(message = "{NotNull.Task.description}")
     private String description;
 
 }

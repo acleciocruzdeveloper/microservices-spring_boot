@@ -1,1 +1,4 @@
+com/book/task/entity/QTask.class
+com/book/task/repositories/TaskRepository.class
+com/book/task/entity/Task.class
 com/book/task/TaskApplication.class
